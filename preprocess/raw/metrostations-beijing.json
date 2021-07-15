@@ -1,0 +1,2207 @@
+[
+  {
+    "zh": "古城",
+    "en": "Gucheng",
+    "grade": "Underground"
+  },
+  {
+    "zh": "八角游乐园",
+    "en": "Bajiao Amusement Park",
+    "grade": "Underground"
+  },
+  {
+    "zh": "八宝山",
+    "en": "Babaoshan",
+    "grade": "Underground"
+  },
+  {
+    "zh": "玉泉路",
+    "en": "Yuquan Lu",
+    "grade": "Underground"
+  },
+  {
+    "zh": "五棵松",
+    "en": "Wukesong",
+    "grade": "Island"
+  },
+  {
+    "zh": "万寿路",
+    "en": "Wanshou Lu",
+    "grade": "Underground"
+  },
+  {
+    "zh": "公主坟",
+    "en": "Gongzhufen",
+    "grade": "Underground"
+  },
+  {
+    "zh": "军事博物馆",
+    "en": "Military Museum",
+    "grade": "Underground"
+  },
+  {
+    "zh": "木樨地",
+    "en": "Muxidi",
+    "grade": "Island"
+  },
+  {
+    "zh": "南礼士路",
+    "en": "Nanlishi Lu",
+    "grade": "Underground"
+  },
+  {
+    "zh": "复兴门",
+    "en": "Fuxing Men",
+    "grade": "Underground"
+  },
+  {
+    "zh": "西单",
+    "en": "Xidan",
+    "grade": "Underground"
+  },
+  {
+    "zh": "天安门西",
+    "en": "Tian'anmen Xi (W)",
+    "grade": "Underground"
+  },
+  {
+    "zh": "天安门东",
+    "en": "Tian'anmen Dong (E)",
+    "grade": "Island"
+  },
+  {
+    "zh": "王府井",
+    "en": "Wangfujing",
+    "grade": "Underground"
+  },
+  {
+    "zh": "东单",
+    "en": "Dongdan",
+    "grade": "Underground"
+  },
+  {
+    "zh": "建国门",
+    "en": "Jianguo Men",
+    "grade": "Underground"
+  },
+  {
+    "zh": "永安里",
+    "en": "Yong'an Li",
+    "grade": "Island"
+  },
+  {
+    "zh": "国贸",
+    "en": "Guomao",
+    "grade": "Underground"
+  },
+  {
+    "zh": "大望路",
+    "en": "Dawang Lu",
+    "grade": "Underground"
+  },
+  {
+    "zh": "四惠",
+    "en": "Sihui",
+    "grade": "At-grade"
+  },
+  {
+    "zh": "四惠东",
+    "en": "Sihui Dong (E)",
+    "grade": "At-grade"
+  },
+  {
+    "zh": "西直门",
+    "en": "Xizhi Men",
+    "grade": "Island"
+  },
+  {
+    "zh": "车公庄",
+    "en": "Chegongzhuang",
+    "grade": "Underground"
+  },
+  {
+    "zh": "阜成门",
+    "en": "Fucheng Men",
+    "grade": "Underground"
+  },
+  {
+    "zh": "复兴门",
+    "en": "Fuxing Men",
+    "grade": "Underground"
+  },
+  {
+    "zh": "长椿街",
+    "en": "Changchun Jie",
+    "grade": "Underground"
+  },
+  {
+    "zh": "宣武门",
+    "en": "Xuanwu Men",
+    "grade": "Underground"
+  },
+  {
+    "zh": "和平门",
+    "en": "Heping Men",
+    "grade": "Underground"
+  },
+  {
+    "zh": "前门",
+    "en": "Qian Men",
+    "grade": "Island"
+  },
+  {
+    "zh": "崇文门",
+    "en": "Chongwen Men",
+    "grade": "Underground"
+  },
+  {
+    "zh": "北京站",
+    "en": "Beijing railway station",
+    "grade": "Underground"
+  },
+  {
+    "zh": "建国门",
+    "en": "Jianguo Men",
+    "grade": "Island"
+  },
+  {
+    "zh": "朝阳门",
+    "en": "Chaoyang Men",
+    "grade": "Underground"
+  },
+  {
+    "zh": "东四十条",
+    "en": "Dongsi Shitiao",
+    "grade": "Island"
+  },
+  {
+    "zh": "东直门",
+    "en": "Dongzhi Men",
+    "grade": "Underground"
+  },
+  {
+    "zh": "雍和宫",
+    "en": "Yonghegong Lama Temple",
+    "grade": "Underground"
+  },
+  {
+    "zh": "安定门",
+    "en": "Anding Men",
+    "grade": "Underground"
+  },
+  {
+    "zh": "鼓楼大街",
+    "en": "Gulou Dajie",
+    "grade": "Island"
+  },
+  {
+    "zh": "积水潭",
+    "en": "Jishuitan",
+    "grade": "Island"
+  },
+  {
+    "zh": "安河桥北",
+    "en": "Anheqiao Bei (N)",
+    "grade": "Side/island hybrid"
+  },
+  {
+    "zh": "北宫门",
+    "en": "Beigongmen",
+    "grade": "Underground"
+  },
+  {
+    "zh": "西苑",
+    "en": "Xi Yuan",
+    "grade": "Underground"
+  },
+  {
+    "zh": "圆明园",
+    "en": "Yuanmingyuan Park",
+    "grade": "Underground"
+  },
+  {
+    "zh": "北京大学东门",
+    "en": "Peking Univ. East Gate",
+    "grade": "Underground"
+  },
+  {
+    "zh": "中关村",
+    "en": "Zhongguancun",
+    "grade": "Underground"
+  },
+  {
+    "zh": "海淀黄庄",
+    "en": "Haidian Huangzhuang",
+    "grade": "Underground"
+  },
+  {
+    "zh": "人民大学",
+    "en": "Renmin Univ.",
+    "grade": "Underground"
+  },
+  {
+    "zh": "魏公村",
+    "en": "Weigongcun",
+    "grade": "Underground"
+  },
+  {
+    "zh": "国家图书馆",
+    "en": "National Library",
+    "grade": "Underground"
+  },
+  {
+    "zh": "动物园",
+    "en": "Beijing Zoo",
+    "grade": "Underground"
+  },
+  {
+    "zh": "西直门",
+    "en": "Xizhi Men",
+    "grade": "Island"
+  },
+  {
+    "zh": "新街口",
+    "en": "Xinjie Kou",
+    "grade": "Underground"
+  },
+  {
+    "zh": "平安里",
+    "en": "Ping'an Li",
+    "grade": "Underground"
+  },
+  {
+    "zh": "西四",
+    "en": "Xisi",
+    "grade": "Underground"
+  },
+  {
+    "zh": "灵境胡同",
+    "en": "Lingjing Hutong",
+    "grade": "Underground"
+  },
+  {
+    "zh": "西单",
+    "en": "Xidan",
+    "grade": "Underground"
+  },
+  {
+    "zh": "宣武门",
+    "en": "Xuanwu Men",
+    "grade": "Underground"
+  },
+  {
+    "zh": "菜市口",
+    "en": "Caishi Kou",
+    "grade": "Underground"
+  },
+  {
+    "zh": "陶然亭",
+    "en": "Taoranting",
+    "grade": "Underground"
+  },
+  {
+    "zh": "北京南站",
+    "en": "Beijing South railway station",
+    "grade": "Island"
+  },
+  {
+    "zh": "马家堡",
+    "en": "Majiapu",
+    "grade": "Underground"
+  },
+  {
+    "zh": "角门西",
+    "en": "Jiaomen Xi (W)",
+    "grade": "Underground"
+  },
+  {
+    "zh": "公益西桥",
+    "en": "Gongyi Xiqiao",
+    "grade": "Underground"
+  },
+  {
+    "zh": "",
+    "en": "Songjiazhuang",
+    "grade": "Underground"
+  },
+  {
+    "zh": "宋家庄",
+    "en": "Songjiazhuang",
+    "grade": "Underground"
+  },
+  {
+    "zh": "刘家窑",
+    "en": "Liujiayao",
+    "grade": "Underground"
+  },
+  {
+    "zh": "蒲黄榆",
+    "en": "Puhuangyu",
+    "grade": "Underground"
+  },
+  {
+    "zh": "天坛东门",
+    "en": "Temple of Heaven East Gate",
+    "grade": "Underground"
+  },
+  {
+    "zh": "磁器口",
+    "en": "Ciqi Kou",
+    "grade": "Underground"
+  },
+  {
+    "zh": "崇文门",
+    "en": "Chongwen Men",
+    "grade": "Underground"
+  },
+  {
+    "zh": "东单",
+    "en": "Dongdan",
+    "grade": "Underground"
+  },
+  {
+    "zh": "灯市口",
+    "en": "Dengshi Kou",
+    "grade": "Underground"
+  },
+  {
+    "zh": "东四",
+    "en": "Dongsi",
+    "grade": "Underground"
+  },
+  {
+    "zh": "张自忠路",
+    "en": "Zhangzizhong Lu",
+    "grade": "Underground"
+  },
+  {
+    "zh": "北新桥",
+    "en": "Beixinqiao",
+    "grade": "Underground"
+  },
+  {
+    "zh": "雍和宫",
+    "en": "Yonghegong Lama Temple",
+    "grade": "Underground"
+  },
+  {
+    "zh": "和平里北街",
+    "en": "Hepingli Beijie",
+    "grade": "Underground"
+  },
+  {
+    "zh": "和平西桥",
+    "en": "Heping Xiqiao",
+    "grade": "Underground"
+  },
+  {
+    "zh": "惠新西街南口",
+    "en": "Huixin Xijie Nankou",
+    "grade": "Underground"
+  },
+  {
+    "zh": "惠新西街北口",
+    "en": "Huixin Xijie Beikou",
+    "grade": "Underground"
+  },
+  {
+    "zh": "大屯路东",
+    "en": "Datunlu Dong (E)",
+    "grade": "Elevated"
+  },
+  {
+    "zh": "北苑路北",
+    "en": "Beiyuanlu Bei (N)",
+    "grade": "Elevated"
+  },
+  {
+    "zh": "立水桥南",
+    "en": "Lishuiqiao Nan (S)",
+    "grade": "Elevated"
+  },
+  {
+    "zh": "立水桥",
+    "en": "Lishui Qiao",
+    "grade": "At-grade"
+  },
+  {
+    "zh": "天通苑南",
+    "en": "Tiantongyuan Nan (S)",
+    "grade": "Side"
+  },
+  {
+    "zh": "天通苑",
+    "en": "Tiantong Yuan",
+    "grade": "Elevated"
+  },
+  {
+    "zh": "天通苑北",
+    "en": "Tiantongyuan Bei (N)",
+    "grade": "Elevated"
+  },
+  {
+    "zh": "金安桥",
+    "en": "Jin'an Qiao",
+    "grade": "Underground"
+  },
+  {
+    "zh": "苹果园",
+    "en": "Pingguo Yuan",
+    "grade": "Underground"
+  },
+  {
+    "zh": "杨庄",
+    "en": "Yangzhuang",
+    "grade": "Underground"
+  },
+  {
+    "zh": "西黄村",
+    "en": "Xihuangcun",
+    "grade": "Underground"
+  },
+  {
+    "zh": "廖公庄",
+    "en": "Liaogongzhuang",
+    "grade": "Underground"
+  },
+  {
+    "zh": "田村",
+    "en": "Tiancun",
+    "grade": "Underground"
+  },
+  {
+    "zh": "海淀五路居",
+    "en": "Haidian Wuluju",
+    "grade": "Underground"
+  },
+  {
+    "zh": "慈寿寺",
+    "en": "Cishou Si",
+    "grade": "Underground"
+  },
+  {
+    "zh": "花园桥",
+    "en": "Huayuan Qiao",
+    "grade": "Underground"
+  },
+  {
+    "zh": "白石桥南",
+    "en": "Baishiqiao Nan (S)",
+    "grade": "Underground"
+  },
+  {
+    "zh": "二里沟",
+    "en": "Erligou",
+    "grade": "Underground"
+  },
+  {
+    "zh": "车公庄西",
+    "en": "Chegongzhuang Xi (W)",
+    "grade": "Underground"
+  },
+  {
+    "zh": "车公庄",
+    "en": "Chegongzhuang",
+    "grade": "Underground"
+  },
+  {
+    "zh": "平安里",
+    "en": "Ping'an Li",
+    "grade": "Underground"
+  },
+  {
+    "zh": "北海北",
+    "en": "Beihai Bei (N)",
+    "grade": "Underground"
+  },
+  {
+    "zh": "南锣鼓巷",
+    "en": "Nanluogu Xiang",
+    "grade": "Underground"
+  },
+  {
+    "zh": "东四",
+    "en": "Dongsi",
+    "grade": "Underground"
+  },
+  {
+    "zh": "朝阳门",
+    "en": "Chaoyang Men",
+    "grade": "Underground"
+  },
+  {
+    "zh": "东大桥",
+    "en": "Dongdaqiao",
+    "grade": "Underground"
+  },
+  {
+    "zh": "呼家楼",
+    "en": "Hujialou",
+    "grade": "Underground"
+  },
+  {
+    "zh": "金台路",
+    "en": "Jintai Lu",
+    "grade": "Underground"
+  },
+  {
+    "zh": "十里堡",
+    "en": "Shilipu",
+    "grade": "Underground"
+  },
+  {
+    "zh": "青年路",
+    "en": "Qingnian Lu",
+    "grade": "Underground"
+  },
+  {
+    "zh": "褡裢坡",
+    "en": "Dalianpo",
+    "grade": "Underground"
+  },
+  {
+    "zh": "黄渠",
+    "en": "Huangqu",
+    "grade": "Underground"
+  },
+  {
+    "zh": "常营",
+    "en": "Changying",
+    "grade": "Underground"
+  },
+  {
+    "zh": "草房",
+    "en": "Caofang",
+    "grade": "Underground"
+  },
+  {
+    "zh": "物资学院路",
+    "en": "Wuzi Xueyuan Lu",
+    "grade": "Underground"
+  },
+  {
+    "zh": "通州北关",
+    "en": "Tongzhou Beiguan",
+    "grade": "Underground"
+  },
+  {
+    "zh": "通运门",
+    "en": "Tongyun Men",
+    "grade": "Underground"
+  },
+  {
+    "zh": "北运河西",
+    "en": "Beiyunhe Xi (W)",
+    "grade": "Underground"
+  },
+  {
+    "zh": "北运河东",
+    "en": "Beiyunhe Dong (E)",
+    "grade": "Underground"
+  },
+  {
+    "zh": "郝家府",
+    "en": "Haojia Fu",
+    "grade": "Underground"
+  },
+  {
+    "zh": "东夏园",
+    "en": "Dongxia Yuan",
+    "grade": "Underground"
+  },
+  {
+    "zh": "潞城",
+    "en": "Lucheng",
+    "grade": "Underground"
+  },
+  {
+    "zh": "北京西站",
+    "en": "Beijing West railway station",
+    "grade": "Underground"
+  },
+  {
+    "zh": "湾子",
+    "en": "Wanzi",
+    "grade": "Underground"
+  },
+  {
+    "zh": "达官营",
+    "en": "Daguanying",
+    "grade": "Underground"
+  },
+  {
+    "zh": "广安门内",
+    "en": "Guang'anmen Nei",
+    "grade": "Underground"
+  },
+  {
+    "zh": "菜市口",
+    "en": "Caishi Kou",
+    "grade": "Underground"
+  },
+  {
+    "zh": "虎坊桥",
+    "en": "Hufangqiao",
+    "grade": "Underground"
+  },
+  {
+    "zh": "珠市口",
+    "en": "Zhushi Kou",
+    "grade": "Island"
+  },
+  {
+    "zh": "桥湾",
+    "en": "Qiaowan",
+    "grade": "Underground"
+  },
+  {
+    "zh": "磁器口",
+    "en": "Ciqi Kou",
+    "grade": "Underground"
+  },
+  {
+    "zh": "广渠门内",
+    "en": "Guangqumen Nei",
+    "grade": "Underground"
+  },
+  {
+    "zh": "广渠门外",
+    "en": "Guangqumen Wai",
+    "grade": "Underground"
+  },
+  {
+    "zh": "双井",
+    "en": "Shuangjing",
+    "grade": "Underground"
+  },
+  {
+    "zh": "九龙山",
+    "en": "Jiulongshan",
+    "grade": "Underground"
+  },
+  {
+    "zh": "大郊亭",
+    "en": "Dajiaoting",
+    "grade": "Underground"
+  },
+  {
+    "zh": "百子湾",
+    "en": "Baiziwan",
+    "grade": "Underground"
+  },
+  {
+    "zh": "化工",
+    "en": "Huagong",
+    "grade": "Underground"
+  },
+  {
+    "zh": "南楼梓庄",
+    "en": "Nanlouzi Zhuang",
+    "grade": "Underground"
+  },
+  {
+    "zh": "欢乐谷景区",
+    "en": "Happy Valley",
+    "grade": "Underground"
+  },
+  {
+    "zh": "垡头",
+    "en": "Fatou",
+    "grade": "Underground"
+  },
+  {
+    "zh": "双合",
+    "en": "Shuanghe",
+    "grade": "Underground"
+  },
+  {
+    "zh": "焦化厂",
+    "en": "Jiaohua Chang",
+    "grade": "Underground"
+  },
+  {
+    "zh": "黄厂",
+    "en": "Huangchang",
+    "grade": "Underground"
+  },
+  {
+    "zh": "郎辛庄",
+    "en": "Langxinzhuang",
+    "grade": "Underground"
+  },
+  {
+    "zh": "黑庄户",
+    "en": "Heizhuanghu",
+    "grade": "Underground"
+  },
+  {
+    "zh": "万盛西",
+    "en": "Wansheng Xi (W)",
+    "grade": "Underground"
+  },
+  {
+    "zh": "万盛东",
+    "en": "Wansheng Dong (E)",
+    "grade": "Underground"
+  },
+  {
+    "zh": "群芳",
+    "en": "Qunfang",
+    "grade": "Underground"
+  },
+  {
+    "zh": "高楼金",
+    "en": "Gaoloujin",
+    "grade": "Underground"
+  },
+  {
+    "zh": "花庄",
+    "en": "Huazhuang",
+    "grade": "Underground"
+  },
+  {
+    "zh": "环球度假区",
+    "en": "Universal Resort",
+    "grade": "Underground"
+  },
+  {
+    "zh": "朱辛庄",
+    "en": "Zhuxinzhuang",
+    "grade": "Elevated"
+  },
+  {
+    "zh": "育知路",
+    "en": "Yuzhi Lu",
+    "grade": "Underground"
+  },
+  {
+    "zh": "平西府",
+    "en": "Pingxi Fu",
+    "grade": "Underground"
+  },
+  {
+    "zh": "回龙观东大街",
+    "en": "Huilongguan Dongdajie",
+    "grade": "Underground"
+  },
+  {
+    "zh": "霍营",
+    "en": "Huoying",
+    "grade": "Underground"
+  },
+  {
+    "zh": "育新",
+    "en": "Yuxin",
+    "grade": "Underground"
+  },
+  {
+    "zh": "西小口",
+    "en": "Xixiao Kou",
+    "grade": "Underground"
+  },
+  {
+    "zh": "永泰庄",
+    "en": "Yongtaizhuang",
+    "grade": "Underground"
+  },
+  {
+    "zh": "林萃桥",
+    "en": "Lincui Qiao",
+    "grade": "Underground"
+  },
+  {
+    "zh": "森林公园南门",
+    "en": "Forest Park South Gate",
+    "grade": "Underground"
+  },
+  {
+    "zh": "奥林匹克公园",
+    "en": "Olympic Park",
+    "grade": "Underground"
+  },
+  {
+    "zh": "奥体中心",
+    "en": "Olympic Sports Center",
+    "grade": "Underground"
+  },
+  {
+    "zh": "北土城",
+    "en": "Beitucheng",
+    "grade": "Underground"
+  },
+  {
+    "zh": "安华桥",
+    "en": "Anhua Qiao",
+    "grade": "Underground"
+  },
+  {
+    "zh": "安德里北街",
+    "en": "Andeli Beijie",
+    "grade": "Underground"
+  },
+  {
+    "zh": "鼓楼大街",
+    "en": "Gulou Dajie",
+    "grade": "Underground"
+  },
+  {
+    "zh": "什刹海",
+    "en": "Shichahai",
+    "grade": "Underground"
+  },
+  {
+    "zh": "南锣鼓巷",
+    "en": "Nanluogu Xiang",
+    "grade": "Underground"
+  },
+  {
+    "zh": "中国美术馆",
+    "en": "National Art Museum",
+    "grade": "Underground"
+  },
+  {
+    "zh": "珠市口",
+    "en": "Zhushi Kou",
+    "grade": "Underground"
+  },
+  {
+    "zh": "天桥",
+    "en": "Tianqiao",
+    "grade": "Underground"
+  },
+  {
+    "zh": "永定门外",
+    "en": "Yongdingmen Wai",
+    "grade": "Underground"
+  },
+  {
+    "zh": "木樨园",
+    "en": "Muxi Yuan",
+    "grade": "Underground"
+  },
+  {
+    "zh": "海户屯",
+    "en": "Haihutun",
+    "grade": "Underground"
+  },
+  {
+    "zh": "大红门",
+    "en": "Dahong Men",
+    "grade": "Underground"
+  },
+  {
+    "zh": "大红门南",
+    "en": "Dahongmen Nan (S)",
+    "grade": "Underground"
+  },
+  {
+    "zh": "和义",
+    "en": "Heyi",
+    "grade": "Underground"
+  },
+  {
+    "zh": "东高地",
+    "en": "Donggaodi",
+    "grade": "Underground"
+  },
+  {
+    "zh": "火箭万源",
+    "en": "Huojian Wanyuan",
+    "grade": "Underground"
+  },
+  {
+    "zh": "五福堂",
+    "en": "Wufutang",
+    "grade": "Underground"
+  },
+  {
+    "zh": "德茂",
+    "en": "Demao",
+    "grade": "Elevated"
+  },
+  {
+    "zh": "瀛海",
+    "en": "Yinghai",
+    "grade": "Elevated"
+  },
+  {
+    "zh": "国家图书馆",
+    "en": "National Library",
+    "grade": "Underground"
+  },
+  {
+    "zh": "白石桥南",
+    "en": "Baishiqiao Nan (S)",
+    "grade": "Underground"
+  },
+  {
+    "zh": "白堆子",
+    "en": "Baiduizi",
+    "grade": "Underground"
+  },
+  {
+    "zh": "军事博物馆",
+    "en": "Military Museum",
+    "grade": "Underground"
+  },
+  {
+    "zh": "北京西站",
+    "en": "Beijing West railway station",
+    "grade": "Underground"
+  },
+  {
+    "zh": "六里桥东",
+    "en": "Liuliqiao Dong (E)",
+    "grade": "Underground"
+  },
+  {
+    "zh": "六里桥",
+    "en": "Liuli Qiao",
+    "grade": "Underground"
+  },
+  {
+    "zh": "七里庄",
+    "en": "Qilizhuang",
+    "grade": "Underground"
+  },
+  {
+    "zh": "丰台东大街",
+    "en": "Fengtai Dongdajie",
+    "grade": "Underground"
+  },
+  {
+    "zh": "丰台南路",
+    "en": "Fengtai Nanlu",
+    "grade": "Underground"
+  },
+  {
+    "zh": "科怡路",
+    "en": "Keyi Lu",
+    "grade": "Underground"
+  },
+  {
+    "zh": "丰台科技园",
+    "en": "Fengtai Science Park",
+    "grade": "Underground"
+  },
+  {
+    "zh": "郭公庄",
+    "en": "Guogongzhuang",
+    "grade": "Underground"
+  },
+  {
+    "zh": "巴沟",
+    "en": "Bagou",
+    "grade": "Underground"
+  },
+  {
+    "zh": "苏州街",
+    "en": "Suzhou Jie",
+    "grade": "Underground"
+  },
+  {
+    "zh": "海淀黄庄",
+    "en": "Haidian Huangzhuang",
+    "grade": "Underground"
+  },
+  {
+    "zh": "知春里",
+    "en": "Zhichun Li",
+    "grade": "Underground"
+  },
+  {
+    "zh": "知春路",
+    "en": "Zhichun Lu",
+    "grade": "Underground"
+  },
+  {
+    "zh": "西土城",
+    "en": "Xitucheng",
+    "grade": "Underground"
+  },
+  {
+    "zh": "牡丹园",
+    "en": "Mudan Yuan",
+    "grade": "Underground"
+  },
+  {
+    "zh": "健德门",
+    "en": "Jiande Men",
+    "grade": "Underground"
+  },
+  {
+    "zh": "北土城",
+    "en": "Beitucheng",
+    "grade": "Underground"
+  },
+  {
+    "zh": "安贞门",
+    "en": "Anzhen Men",
+    "grade": "Underground"
+  },
+  {
+    "zh": "惠新西街南口",
+    "en": "Huixin Xijie Nankou",
+    "grade": "Underground"
+  },
+  {
+    "zh": "芍药居",
+    "en": "Shaoyaoju",
+    "grade": "Underground"
+  },
+  {
+    "zh": "太阳宫",
+    "en": "Taiyanggong",
+    "grade": "Underground"
+  },
+  {
+    "zh": "三元桥",
+    "en": "Sanyuan Qiao",
+    "grade": "Underground"
+  },
+  {
+    "zh": "亮马桥",
+    "en": "Liangma Qiao",
+    "grade": "Underground"
+  },
+  {
+    "zh": "农业展览馆",
+    "en": "Agricultural Exhibition Center",
+    "grade": "Underground"
+  },
+  {
+    "zh": "团结湖",
+    "en": "Tuanjiehu",
+    "grade": "Underground"
+  },
+  {
+    "zh": "呼家楼",
+    "en": "Hujialou",
+    "grade": "Underground"
+  },
+  {
+    "zh": "金台夕照",
+    "en": "Jintai Xizhao",
+    "grade": "Underground"
+  },
+  {
+    "zh": "国贸",
+    "en": "Guomao",
+    "grade": "Underground"
+  },
+  {
+    "zh": "双井",
+    "en": "Shuangjing",
+    "grade": "Underground"
+  },
+  {
+    "zh": "劲松",
+    "en": "Jinsong",
+    "grade": "Underground"
+  },
+  {
+    "zh": "潘家园",
+    "en": "Panjia Yuan",
+    "grade": "Underground"
+  },
+  {
+    "zh": "十里河",
+    "en": "Shilihe",
+    "grade": "Underground"
+  },
+  {
+    "zh": "分钟寺",
+    "en": "Fenzhong Si",
+    "grade": "Underground"
+  },
+  {
+    "zh": "成寿寺",
+    "en": "Chengshou Si",
+    "grade": "Underground"
+  },
+  {
+    "zh": "宋家庄",
+    "en": "Songjiazhuang",
+    "grade": "Underground"
+  },
+  {
+    "zh": "石榴庄",
+    "en": "Shiliuzhuang",
+    "grade": "Underground"
+  },
+  {
+    "zh": "大红门",
+    "en": "Dahong Men",
+    "grade": "Underground"
+  },
+  {
+    "zh": "角门东",
+    "en": "Jiaomen Dong (E)",
+    "grade": "Underground"
+  },
+  {
+    "zh": "角门西",
+    "en": "Jiaomen Xi (W)",
+    "grade": "Underground"
+  },
+  {
+    "zh": "草桥",
+    "en": "Caoqiao",
+    "grade": "Underground"
+  },
+  {
+    "zh": "纪家庙",
+    "en": "Jijiamiao",
+    "grade": "Underground"
+  },
+  {
+    "zh": "首经贸",
+    "en": "Shoujingmao",
+    "grade": "Underground"
+  },
+  {
+    "zh": "丰台站",
+    "en": "Fengtai railway station",
+    "grade": "Underground"
+  },
+  {
+    "zh": "泥洼",
+    "en": "Niwa",
+    "grade": "Underground"
+  },
+  {
+    "zh": "西局",
+    "en": "Xiju",
+    "grade": "Underground"
+  },
+  {
+    "zh": "六里桥",
+    "en": "Liuli Qiao",
+    "grade": "Underground"
+  },
+  {
+    "zh": "莲花桥",
+    "en": "Lianhua Qiao",
+    "grade": "Underground"
+  },
+  {
+    "zh": "公主坟",
+    "en": "Gongzhufen",
+    "grade": "Underground"
+  },
+  {
+    "zh": "西钓鱼台",
+    "en": "Xidiaoyutai",
+    "grade": "Underground"
+  },
+  {
+    "zh": "慈寿寺",
+    "en": "Cishou Si",
+    "grade": "Underground"
+  },
+  {
+    "zh": "车道沟",
+    "en": "Chedaogou",
+    "grade": "Underground"
+  },
+  {
+    "zh": "长春桥",
+    "en": "Changchun Qiao",
+    "grade": "Underground"
+  },
+  {
+    "zh": "火器营",
+    "en": "Huoqiying",
+    "grade": "Underground"
+  },
+  {
+    "zh": "西直门",
+    "en": "Xizhi Men",
+    "grade": "Elevated"
+  },
+  {
+    "zh": "大钟寺",
+    "en": "Dazhong Si",
+    "grade": "Elevated"
+  },
+  {
+    "zh": "知春路",
+    "en": "Zhichun Lu",
+    "grade": "At-grade"
+  },
+  {
+    "zh": "五道口",
+    "en": "Wudao Kou",
+    "grade": "Elevated"
+  },
+  {
+    "zh": "上地",
+    "en": "Shangdi",
+    "grade": "At-grade"
+  },
+  {
+    "zh": "清河站",
+    "en": "Qinghe railway station",
+    "grade": "At-grade"
+  },
+  {
+    "zh": "西二旗",
+    "en": "Xi'erqi",
+    "grade": "At-grade"
+  },
+  {
+    "zh": "龙泽",
+    "en": "Longze",
+    "grade": "Elevated"
+  },
+  {
+    "zh": "回龙观",
+    "en": "Huilong Guan",
+    "grade": "At-grade"
+  },
+  {
+    "zh": "霍营",
+    "en": "Huoying",
+    "grade": "At-grade"
+  },
+  {
+    "zh": "立水桥",
+    "en": "Lishui Qiao",
+    "grade": "Elevated"
+  },
+  {
+    "zh": "北苑",
+    "en": "Bei Yuan",
+    "grade": "At-grade"
+  },
+  {
+    "zh": "望京西",
+    "en": "Wangjing Xi (W)",
+    "grade": "At-grade"
+  },
+  {
+    "zh": "芍药居",
+    "en": "Shaoyaoju",
+    "grade": "At-grade"
+  },
+  {
+    "zh": "光熙门",
+    "en": "Guangxi Men",
+    "grade": "At-grade"
+  },
+  {
+    "zh": "柳芳",
+    "en": "Liufang",
+    "grade": "At-grade"
+  },
+  {
+    "zh": "东直门",
+    "en": "Dongzhi Men",
+    "grade": "Underground"
+  },
+  {
+    "zh": "张郭庄",
+    "en": "Zhangguozhuang",
+    "grade": "Elevated"
+  },
+  {
+    "zh": "园博园",
+    "en": "Garden Expo Park",
+    "grade": "Elevated"
+  },
+  {
+    "zh": "大瓦窑",
+    "en": "Dawayao",
+    "grade": "Underground"
+  },
+  {
+    "zh": "郭庄子",
+    "en": "Guozhuangzi",
+    "grade": "Underground"
+  },
+  {
+    "zh": "大井",
+    "en": "Dajing",
+    "grade": "Underground"
+  },
+  {
+    "zh": "七里庄",
+    "en": "Qilizhuang",
+    "grade": "Underground"
+  },
+  {
+    "zh": "西局",
+    "en": "Xiju",
+    "grade": "Underground"
+  },
+  {
+    "zh": "北京南站",
+    "en": "Beijing South railway station",
+    "grade": "Underground"
+  },
+  {
+    "zh": "陶然桥",
+    "en": "Taoran Qiao",
+    "grade": "Underground"
+  },
+  {
+    "zh": "永定门外",
+    "en": "Yongdingmen Wai",
+    "grade": "Underground"
+  },
+  {
+    "zh": "景泰",
+    "en": "Jingtai",
+    "grade": "Underground"
+  },
+  {
+    "zh": "蒲黄榆",
+    "en": "Puhuangyu",
+    "grade": "Underground"
+  },
+  {
+    "zh": "方庄",
+    "en": "Fangzhuang",
+    "grade": "Underground"
+  },
+  {
+    "zh": "十里河",
+    "en": "Shilihe",
+    "grade": "Underground"
+  },
+  {
+    "zh": "北工大西门",
+    "en": "Beijing Univ. of Tech. West Gate",
+    "grade": "Underground"
+  },
+  {
+    "zh": "平乐园",
+    "en": "Pingle Yuan",
+    "grade": "Underground"
+  },
+  {
+    "zh": "九龙山",
+    "en": "Jiulongshan",
+    "grade": "Underground"
+  },
+  {
+    "zh": "大望路",
+    "en": "Dawang Lu",
+    "grade": "Underground"
+  },
+  {
+    "zh": "红庙",
+    "en": "Hongmiao",
+    "grade": "Underground"
+  },
+  {
+    "zh": "金台路",
+    "en": "Jintai Lu",
+    "grade": "Underground"
+  },
+  {
+    "zh": "朝阳公园",
+    "en": "Chaoyang Park",
+    "grade": "Underground"
+  },
+  {
+    "zh": "枣营",
+    "en": "Zaoying",
+    "grade": "Underground"
+  },
+  {
+    "zh": "东风北桥",
+    "en": "Dongfeng Beiqiao",
+    "grade": "Underground"
+  },
+  {
+    "zh": "将台",
+    "en": "Jiangtai",
+    "grade": "Underground"
+  },
+  {
+    "zh": "高家园",
+    "en": "Gaojia Yuan",
+    "grade": "Underground"
+  },
+  {
+    "zh": "望京南",
+    "en": "Wangjing Nan (S)",
+    "grade": "Underground"
+  },
+  {
+    "zh": "阜通",
+    "en": "Futong",
+    "grade": "Underground"
+  },
+  {
+    "zh": "望京",
+    "en": "Wangjing",
+    "grade": "Underground"
+  },
+  {
+    "zh": "东湖渠",
+    "en": "Donghuqu",
+    "grade": "Underground"
+  },
+  {
+    "zh": "来广营",
+    "en": "Laiguangying",
+    "grade": "Underground"
+  },
+  {
+    "zh": "善各庄",
+    "en": "Shan'gezhuang",
+    "grade": "Underground"
+  },
+  {
+    "zh": "清华东路西口",
+    "en": "Qinghua Donglu Xikou",
+    "grade": "Underground"
+  },
+  {
+    "zh": "六道口",
+    "en": "Liudao Kou",
+    "grade": "Underground"
+  },
+  {
+    "zh": "北沙滩",
+    "en": "Beishatan",
+    "grade": "Underground"
+  },
+  {
+    "zh": "奥林匹克公园",
+    "en": "Olympic Park",
+    "grade": "Underground"
+  },
+  {
+    "zh": "安立路",
+    "en": "Anli Lu",
+    "grade": "Underground"
+  },
+  {
+    "zh": "大屯路东",
+    "en": "Datunlu Dong (E)",
+    "grade": "Underground"
+  },
+  {
+    "zh": "关庄",
+    "en": "Guanzhuang",
+    "grade": "Underground"
+  },
+  {
+    "zh": "望京西",
+    "en": "Wangjing Xi (W)",
+    "grade": "Underground"
+  },
+  {
+    "zh": "望京",
+    "en": "Wangjing",
+    "grade": "Underground"
+  },
+  {
+    "zh": "望京东",
+    "en": "Wangjing Dong (E)",
+    "grade": "Underground"
+  },
+  {
+    "zh": "崔各庄",
+    "en": "Cuigezhuang",
+    "grade": "Underground"
+  },
+  {
+    "zh": "马泉营",
+    "en": "Maquanying",
+    "grade": "Underground"
+  },
+  {
+    "zh": "孙河",
+    "en": "Sunhe",
+    "grade": "Elevated"
+  },
+  {
+    "zh": "国展",
+    "en": "China Int'l Exhibition Center",
+    "grade": "Elevated"
+  },
+  {
+    "zh": "花梨坎",
+    "en": "Hualikan",
+    "grade": "Elevated"
+  },
+  {
+    "zh": "后沙峪",
+    "en": "Houshayu",
+    "grade": "Elevated"
+  },
+  {
+    "zh": "南法信",
+    "en": "Nanfaxin",
+    "grade": "Half Underground"
+  },
+  {
+    "zh": "石门",
+    "en": "Shimen",
+    "grade": "Underground"
+  },
+  {
+    "zh": "顺义",
+    "en": "Shunyi",
+    "grade": "Underground"
+  },
+  {
+    "zh": "俸伯",
+    "en": "Fengbo",
+    "grade": "Underground"
+  },
+  {
+    "zh": "北安河",
+    "en": "Bei'anhe",
+    "grade": "Underground"
+  },
+  {
+    "zh": "温阳路",
+    "en": "Wenyang Lu",
+    "grade": "Underground"
+  },
+  {
+    "zh": "稻香湖路",
+    "en": "Daoxianghu Lu",
+    "grade": "Underground"
+  },
+  {
+    "zh": "屯佃",
+    "en": "Tundian",
+    "grade": "Underground"
+  },
+  {
+    "zh": "永丰",
+    "en": "Yongfeng",
+    "grade": "Underground"
+  },
+  {
+    "zh": "永丰南",
+    "en": "Yongfeng Nan (S)",
+    "grade": "Underground"
+  },
+  {
+    "zh": "西北旺",
+    "en": "Xibeiwang",
+    "grade": "Underground"
+  },
+  {
+    "zh": "马连洼",
+    "en": "Malianwa",
+    "grade": "Underground"
+  },
+  {
+    "zh": "农大南路",
+    "en": "Nongda Nanlu",
+    "grade": "Underground"
+  },
+  {
+    "zh": "西苑",
+    "en": "Xi Yuan",
+    "grade": "Underground"
+  },
+  {
+    "zh": "万泉河桥",
+    "en": "Wanquanhe Qiao",
+    "grade": "Underground"
+  },
+  {
+    "zh": "苏州街",
+    "en": "Suzhou Jie",
+    "grade": "Underground"
+  },
+  {
+    "zh": "苏州桥",
+    "en": "Suzhou Qiao",
+    "grade": "Underground"
+  },
+  {
+    "zh": "万寿寺",
+    "en": "Wanshou Si",
+    "grade": "Underground"
+  },
+  {
+    "zh": "国家图书馆",
+    "en": "National Library",
+    "grade": "Underground"
+  },
+  {
+    "zh": "二里沟",
+    "en": "Erligou",
+    "grade": "Underground"
+  },
+  {
+    "zh": "甘家口",
+    "en": "Ganjia Kou",
+    "grade": "Underground"
+  },
+  {
+    "zh": "四惠",
+    "en": "Sihui",
+    "grade": "At-grade"
+  },
+  {
+    "zh": "四惠东",
+    "en": "Sihui Dong (E)",
+    "grade": "At-grade"
+  },
+  {
+    "zh": "高碑店",
+    "en": "Gaobeidian",
+    "grade": "Elevated"
+  },
+  {
+    "zh": "传媒大学",
+    "en": "Communication Univ. of China",
+    "grade": "At-grade"
+  },
+  {
+    "zh": "双桥",
+    "en": "Shuang Qiao",
+    "grade": "Elevated"
+  },
+  {
+    "zh": "管庄",
+    "en": "Guaanzhuang",
+    "grade": "Elevated"
+  },
+  {
+    "zh": "八里桥",
+    "en": "Bali Qiao",
+    "grade": "Elevated"
+  },
+  {
+    "zh": "通州北苑",
+    "en": "Tongzhou Beiyuan",
+    "grade": "Elevated"
+  },
+  {
+    "zh": "果园",
+    "en": "Guoyuan",
+    "grade": "Elevated"
+  },
+  {
+    "zh": "九棵树",
+    "en": "Jiukeshu",
+    "grade": "Elevated"
+  },
+  {
+    "zh": "梨园",
+    "en": "Liyuan",
+    "grade": "Elevated"
+  },
+  {
+    "zh": "临河里",
+    "en": "Linheli",
+    "grade": "Elevated"
+  },
+  {
+    "zh": "土桥",
+    "en": "Tu Qiao",
+    "grade": "Elevated"
+  },
+  {
+    "zh": "花庄",
+    "en": "Huazhuang",
+    "grade": "Underground"
+  },
+  {
+    "zh": "环球度假区",
+    "en": "Universal Resort",
+    "grade": "Underground"
+  },
+  {
+    "zh": "西二旗",
+    "en": "Xi'erqi",
+    "grade": "Elevated"
+  },
+  {
+    "zh": "生命科学园",
+    "en": "Life Science Park",
+    "grade": "Elevated"
+  },
+  {
+    "zh": "朱辛庄",
+    "en": "Zhuxinzhuang",
+    "grade": "Elevated"
+  },
+  {
+    "zh": "巩华城",
+    "en": "Gonghua Cheng",
+    "grade": "Elevated"
+  },
+  {
+    "zh": "沙河",
+    "en": "Shahe",
+    "grade": "Elevated"
+  },
+  {
+    "zh": "沙河高教园",
+    "en": "Shahe Univ. Park",
+    "grade": "Elevated"
+  },
+  {
+    "zh": "南邵",
+    "en": "Nanshao",
+    "grade": "Underground"
+  },
+  {
+    "zh": "北邵洼",
+    "en": "Beishaowa",
+    "grade": "Underground"
+  },
+  {
+    "zh": "昌平东关",
+    "en": "Changping Dongguan",
+    "grade": "Underground"
+  },
+  {
+    "zh": "昌平",
+    "en": "Changping",
+    "grade": "Underground"
+  },
+  {
+    "zh": "十三陵景区",
+    "en": "Ming Tombs",
+    "grade": "Underground"
+  },
+  {
+    "zh": "昌平西山口",
+    "en": "Changping Xishankou",
+    "grade": "Underground"
+  },
+  {
+    "zh": "公益西桥",
+    "en": "Gongyi Xiqiao",
+    "grade": "Underground"
+  },
+  {
+    "zh": "新宫",
+    "en": "Xin Gong",
+    "grade": "Underground"
+  },
+  {
+    "zh": "西红门",
+    "en": "Xihong Men",
+    "grade": "Elevated"
+  },
+  {
+    "zh": "高米店北",
+    "en": "Gaomidian Bei (N)",
+    "grade": "Underground"
+  },
+  {
+    "zh": "高米店南",
+    "en": "Gaomidian Nan (S)",
+    "grade": "Underground"
+  },
+  {
+    "zh": "枣园",
+    "en": "Zaoyuan",
+    "grade": "Underground"
+  },
+  {
+    "zh": "清源路",
+    "en": "Qingyuan Lu",
+    "grade": "Underground"
+  },
+  {
+    "zh": "黄村西大街",
+    "en": "Huangcun Xidajie",
+    "grade": "Underground"
+  },
+  {
+    "zh": "黄村火车站",
+    "en": "Huangcun railway station",
+    "grade": "Underground"
+  },
+  {
+    "zh": "义和庄",
+    "en": "Yihezhuang",
+    "grade": "Underground"
+  },
+  {
+    "zh": "生物医药基地",
+    "en": "Biomedical Base",
+    "grade": "Underground"
+  },
+  {
+    "zh": "天宫院",
+    "en": "Tiangong Yuan",
+    "grade": "Underground"
+  },
+  {
+    "zh": "东管头南",
+    "en": "Dongguantou Nan (S)",
+    "grade": "Underground"
+  },
+  {
+    "zh": "首经贸",
+    "en": "Shoujingmao",
+    "grade": "Underground"
+  },
+  {
+    "zh": "花乡东桥",
+    "en": "Huaxiang Dongqiao",
+    "grade": "Underground"
+  },
+  {
+    "zh": "白盆窑",
+    "en": "Baipenyao",
+    "grade": "Underground"
+  },
+  {
+    "zh": "郭公庄",
+    "en": "Guogongzhuang",
+    "grade": "Underground"
+  },
+  {
+    "zh": "大葆台",
+    "en": "Dabaotai",
+    "grade": "Half Underground"
+  },
+  {
+    "zh": "稻田",
+    "en": "Daotian",
+    "grade": "Elevated"
+  },
+  {
+    "zh": "长阳",
+    "en": "Changyang",
+    "grade": "Elevated"
+  },
+  {
+    "zh": "篱笆房",
+    "en": "Libafang",
+    "grade": "Elevated"
+  },
+  {
+    "zh": "广阳城",
+    "en": "Guangyang Cheng",
+    "grade": "Elevated"
+  },
+  {
+    "zh": "良乡大学城北",
+    "en": "Liangxiang Univ. Town North",
+    "grade": "Elevated"
+  },
+  {
+    "zh": "良乡大学城",
+    "en": "Liangxiang Univ. Town",
+    "grade": "Elevated"
+  },
+  {
+    "zh": "良乡大学城西",
+    "en": "Liangxiang Univ. Town West",
+    "grade": "Elevated"
+  },
+  {
+    "zh": "良乡南关",
+    "en": "Liangxiang Nanguan",
+    "grade": "Elevated"
+  },
+  {
+    "zh": "苏庄",
+    "en": "Suzhuang",
+    "grade": "Elevated"
+  },
+  {
+    "zh": "阎村东",
+    "en": "Yancun Dong (E)",
+    "grade": "Elevated"
+  },
+  {
+    "zh": "石厂",
+    "en": "Shichang",
+    "grade": "Elevated"
+  },
+  {
+    "zh": "小园",
+    "en": "Xiaoyuan",
+    "grade": "Elevated"
+  },
+  {
+    "zh": "栗园庄",
+    "en": "Liyuanzhuang",
+    "grade": "Elevated"
+  },
+  {
+    "zh": "上岸",
+    "en": "Shang'an",
+    "grade": "Elevated"
+  },
+  {
+    "zh": "桥户营",
+    "en": "Qiaohuying",
+    "grade": "Elevated"
+  },
+  {
+    "zh": "四道桥",
+    "en": "Sidao Qiao",
+    "grade": "Elevated"
+  },
+  {
+    "zh": "金安桥",
+    "en": "Jin'an Qiao",
+    "grade": "Elevated"
+  },
+  {
+    "zh": "巴沟",
+    "en": "Bagou",
+    "grade": "At-grade"
+  },
+  {
+    "zh": "颐和园西门",
+    "en": "Summer Palace West Gate",
+    "grade": "At-grade"
+  },
+  {
+    "zh": "茶棚",
+    "en": "Chapeng",
+    "grade": "At-grade"
+  },
+  {
+    "zh": "万安",
+    "en": "Wan'an",
+    "grade": "At-grade"
+  },
+  {
+    "zh": "植物园",
+    "en": "Botanical Garden",
+    "grade": "At-grade"
+  },
+  {
+    "zh": "香山",
+    "en": "Xiangshan",
+    "grade": "At-grade"
+  },
+  {
+    "zh": "阎村东",
+    "en": "Yancun Dong (E)",
+    "grade": "Elevated"
+  },
+  {
+    "zh": "紫草坞",
+    "en": "Zicaowu",
+    "grade": "Elevated"
+  },
+  {
+    "zh": "阎村",
+    "en": "Yancun",
+    "grade": "Elevated"
+  },
+  {
+    "zh": "星城",
+    "en": "Xingcheng",
+    "grade": "Elevated"
+  },
+  {
+    "zh": "大石河东",
+    "en": "Dashihe Dong (E)",
+    "grade": "Elevated"
+  },
+  {
+    "zh": "马各庄",
+    "en": "Magezhuang",
+    "grade": "Elevated"
+  },
+  {
+    "zh": "饶乐府",
+    "en": "Raole Fu",
+    "grade": "Elevated"
+  },
+  {
+    "zh": "房山城关",
+    "en": "Fangshan Chengguan",
+    "grade": "Elevated"
+  },
+  {
+    "zh": "燕山",
+    "en": "Yanshan",
+    "grade": "Elevated"
+  },
+  {
+    "zh": "宋家庄",
+    "en": "Songjiazhuang",
+    "grade": "Underground"
+  },
+  {
+    "zh": "肖村",
+    "en": "Xiaocun",
+    "grade": "Underground"
+  },
+  {
+    "zh": "小红门",
+    "en": "Xiaohong Men",
+    "grade": "Underground"
+  },
+  {
+    "zh": "旧宫",
+    "en": "Jiu Gong",
+    "grade": "Underground"
+  },
+  {
+    "zh": "亦庄桥",
+    "en": "Yizhuang Qiao",
+    "grade": "Elevated"
+  },
+  {
+    "zh": "亦庄文化园",
+    "en": "Yizhuang Culture Park",
+    "grade": "Elevated"
+  },
+  {
+    "zh": "万源街",
+    "en": "Wanyuan Jie",
+    "grade": "Elevated"
+  },
+  {
+    "zh": "荣京东街",
+    "en": "Rongjing Dongjie",
+    "grade": "Elevated"
+  },
+  {
+    "zh": "荣昌东街",
+    "en": "Rongchang Dongjie",
+    "grade": "Elevated"
+  },
+  {
+    "zh": "同济南路",
+    "en": "Tongji Nanlu",
+    "grade": "Elevated"
+  },
+  {
+    "zh": "经海路",
+    "en": "Jinghai Lu",
+    "grade": "Elevated"
+  },
+  {
+    "zh": "次渠南",
+    "en": "Ciqu Nan (S)",
+    "grade": "Underground"
+  },
+  {
+    "zh": "次渠",
+    "en": "Ciqu",
+    "grade": "Underground"
+  },
+  {
+    "zh": "亦庄火车站",
+    "en": "Yizhuang railway station",
+    "grade": "Underground"
+  },
+  {
+    "zh": "老观里",
+    "en": "Laoguan Li",
+    "grade": "At-grade"
+  },
+  {
+    "zh": "屈庄",
+    "en": "Qu Zhuang",
+    "grade": "At-grade"
+  },
+  {
+    "zh": "融兴街",
+    "en": "Rongxing Jie",
+    "grade": "At-grade"
+  },
+  {
+    "zh": "瑞合庄",
+    "en": "Rhihe Zhuang",
+    "grade": "At-grade"
+  },
+  {
+    "zh": "太和桥北",
+    "en": "Taihe Qiao Bei (N)",
+    "grade": "At-grade"
+  },
+  {
+    "zh": "四海庄",
+    "en": "Sihai Zhuang",
+    "grade": "At-grade"
+  },
+  {
+    "zh": "九号村",
+    "en": "Jiuhao Cun",
+    "grade": "At-grade"
+  },
+  {
+    "zh": "泰河路",
+    "en": "Taihe Lu",
+    "grade": "At-grade"
+  },
+  {
+    "zh": "鹿圈东",
+    "en": "Lujuan Dong (E)",
+    "grade": "At-grade"
+  },
+  {
+    "zh": "亦庄同仁",
+    "en": "Yizhuang Tongren",
+    "grade": "At-grade"
+  },
+  {
+    "zh": "荣昌东街",
+    "en": "Rongchang Dongjie",
+    "grade": "At-grade"
+  },
+  {
+    "zh": "亦创会展中心",
+    "en": "Beijing Etrong International Exhibition & Convention Center",
+    "grade": "At-grade"
+  },
+  {
+    "zh": "经海一路",
+    "en": "Jinghai Yilu",
+    "grade": "At-grade"
+  },
+  {
+    "zh": "定海园西",
+    "en": "Dinghai Yuan Xi (W)",
+    "grade": "At-grade"
+  },
+  {
+    "zh": "定海园",
+    "en": "Dinghai Yuan",
+    "grade": "At-grade"
+  },
+  {
+    "zh": "东直门",
+    "en": "Dongzhi Men",
+    "grade": "Underground"
+  },
+  {
+    "zh": "三元桥",
+    "en": "Sanyuan Qiao",
+    "grade": "Underground"
+  },
+  {
+    "zh": "3号航站楼",
+    "en": "Terminal 3",
+    "grade": "Elevated"
+  },
+  {
+    "zh": "2号航站楼",
+    "en": "Terminal 2",
+    "grade": "Underground"
+  },
+  {
+    "zh": "草桥",
+    "en": "Caoqiao",
+    "grade": "Underground"
+  },
+  {
+    "zh": "大兴新城",
+    "en": "Daxing Xincheng",
+    "grade": "Underground"
+  },
+  {
+    "zh": "大兴机场",
+    "en": "Daxing Airport",
+    "grade": "Underground"
+  }
+]

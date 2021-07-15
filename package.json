@@ -1,0 +1,30 @@
+{
+  "name": "by-subway",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "preproc": "node preprocess/main.js",
+    "serve": "live-server --port=5129",
+    "watch:js": "esbuild app/scripts/main.js --bundle --watch --outfile=app/main.bundle.js",
+    "start": "npm-run-all --parallel serve watch:*",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "jzhou_alt",
+  "license": "MIT",
+  "devDependencies": {
+    "esbuild": "^0.12.15",
+    "live-server": "^1.2.1",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.3.2"
+  },
+  "dependencies": {
+    "d3": "^7.0.0",
+    "json-stringify-pretty-compact": "^3.0.0",
+    "lodash": "^4.17.21",
+    "node-fetch": "^2.6.1",
+    "polybooljs": "^1.2.0",
+    "polygon-offset": "^0.3.1",
+    "xml2js": "^0.4.23"
+  }
+}

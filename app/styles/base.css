@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@800&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    transition: all .2s;
+}
+
+svg-frame {
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    position: absolute;
+    align-self: center;
+}
+
+#root {
+    width: 100vw;
+    height: 100vh;
+}
+
+#g {
+    transition: transform 1s;
+}
+
+svg {
+    overflow: auto;
+}
+
+.interactive-rect {
+    transition: .2s;
+    cursor: pointer;
+}
+
+.overlaid-station {
+    pointer-events: none;
+    transition: all .1s;
+}
+
+.overlaid-station:not(.active) {
+    fill: #444;
+    transition: transform .1s, fill .4s ease-in;
+}
+
+.overlaid-station.center {
+    fill: white;
+}
+
+.station-bars {
+    transform: rotate(45deg)
+}
+
+.station-text {
+    font-family: 'Inter', 'Source Han Sans SC', sans-serif;
+    cursor: default;
+    user-select: none;
+}
+
+.station-text.zh-cn {
+    font-size: 8px;
+    font-weight: bold;
+}
+
+.station-text.en-us {
+    font-size: 5px;
+    font-weight: 700;
+}
+
+#reset {
+    position: absolute;
+}
+
+.g-lines-ambient {
+    opacity: 0.06;
+}
+
+.g-voronoi-clouds, .voronoi-lines {
+    pointer-events: none;
+    display: none;
+}
