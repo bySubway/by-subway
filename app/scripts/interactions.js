@@ -1,17 +1,18 @@
 import { render } from "./render"
+import { getState } from "./config"
 import { clearActiveEls, updateActiveEls } from "./updateActiveEls"
 import { clearAllSavedTimeouts } from "./utils"
 
 export const hoverOnStation = (mouseEnter, sub) => {
 
-    const { animating } = window.state
-    if (animating) return
+    const state = getState()
+    if (state.animating) return
 
     if (mouseEnter) {
-        window.state.centerStation = sub
+        state.centerStation = sub
         updateActiveEls(sub, false)
     } else {
-        window.state.centerStation = ""
+        state.centerStation = ""
         clearActiveEls()
     }
 
@@ -20,15 +21,16 @@ export const hoverOnStation = (mouseEnter, sub) => {
 }
 
 export const clickOnStation = sub => {
-    const { animating } = window.state
-    if (animating) return
-    window.state.animating = true
+    const state = getState()
+    if (state.animating) return
+    state.animating = true
     updateActiveEls(sub, true)
 }
 
 export const onReset = () => {
-    const state = window.state
+    const state = getState()
     state.animating = false
+    state.centerStation = ''
     clearActiveEls()
     clearAllSavedTimeouts()
     render()

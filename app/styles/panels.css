@@ -1,0 +1,114 @@
+.panels {
+    width: 400px;
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-right: 20px;
+}
+
+.panel {
+    margin-bottom: 20px;
+    padding: 15px;
+    background: rgba(50,50,50,0.7);
+    color: white;
+    border-radius: 10px;
+    transition: all .2s;
+    backdrop-filter: blur(10px);
+}
+
+.data-viewport {
+    max-height: 220px;
+    overflow: auto;
+}
+
+.panel h1 {
+    font-weight: 300;
+    font-size: 13px;
+    margin: 0;
+    text-transform: uppercase;
+    opacity: 0.3;
+}
+
+.panel hr {
+    border: none;
+    height: 1px;
+    background: #fff;
+    opacity: 0.08;
+    margin: 10px 0 20px;
+}
+
+.panel ul {
+    padding-left: 20px;
+}
+
+.panel li {
+    font-size: 13px;
+    margin-bottom: 5px;
+    color: #666;
+}
+
+.panel .data-source {
+    color: #aaa;
+}
+
+.name-en, .name-cluster {
+    margin: 3px 0;
+    line-height: 1;
+}
+
+.name-substation {
+    font-size: 12px;
+    vertical-align: super;
+    opacity: 0.3;
+}
+
+.pls {
+    margin: 10px 0 0;
+}
+
+.station-info {
+    min-height: 134px;
+}
+
+.s-reached {
+    display: inline-flex;
+    align-items: center;
+    padding: 3px 10px;
+    margin-right: 5px;
+    background-color: #111;
+    color: rgba(255,255,255,0.9);
+    font-weight: bold;
+    border-radius: 3px;
+    font-size: 12px;
+    margin: 0 5px 5px 0;
+    align-items: center;
+    cursor: default;
+}
+
+.s-reached .dot {
+    height: 4px;
+    width: 4px;
+    margin-right: 6px;
+    border-radius: 999em;
+    background-color: white;
+}
+
+
+.single-pl-box-mini {
+    display: inline-block;
+    margin: 0 8px 8px 0;
+    padding: 3px 8px;
+    font-size: 12px;
+    border-radius: 3px;
+}
+
+code {
+    font-family: 'Tabular', 'Courier New', 'Courier', sans-serif;
+    background-color: black;
+    color: white;
+    padding: 5px 10px;
+    margin: 4px 0;
+    display: block;
+    font-size: 12px;
+    margin-right: 5px;
+}

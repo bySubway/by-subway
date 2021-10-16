@@ -1,17 +1,22 @@
+import * as d3 from 'd3'
 import { decodeSubstation, encodeSegment, encodeSegmentBySubstations, encodeSubstation } from './encoders'
 import { render } from './render'
+import { getState } from './config'
 import { setSavedTimeout } from './utils'
 
 export const clearActiveEls = () => {
 
-    window.state.activeStations.clear()
-    window.state.activeLineSegments.clear()
+    const state = getState()
+    state.activeStations.clear()
+    state.activeStationsListed.clear()
+    state.activeLineSegments.clear()
 
 }
 
 export const updateActiveEls = (sub, sync) => {
 
-    const state = window.state
+    const state = getState()
+    const { playbackSpeed } = state
     const { stations } = state.subway
 
     clearActiveEls()
@@ -29,12 +34,12 @@ export const updateActiveEls = (sub, sync) => {
     const decodedSub = decodeSubstation(sub)
 
     const addReachableNodes = (origin, cost) => {
-        
+
         const { name, pl } = origin
         const { adjacents } = stations.dict[origin.name].substations[pl]
 
         // For an adjacent, check if has been here and the cost is actually lower
-        const spentCost = state.costAllowedForSearch - cost
+        const spentCost = state.costAllowed.clickStations - cost
         const encodedSub = encodeSubstation(name, pl)
 
         const beenHereAndLower = M.has(encodedSub) && M.get(encodedSub) < spentCost
@@ -63,12 +68,12 @@ export const updateActiveEls = (sub, sync) => {
 
                 if (sync) {
 
-                    const spentCost = state.costAllowedForSearch - (cost - adj.t)
-                    T = Math.max(T, spentCost * 3)
+                    const spentCost = state.costAllowed.clickStations - (cost - adj.t)
+                    T = Math.max(T, spentCost * playbackSpeed)
                     // No need to draw if the segment is a transfer segment
                     if (pl === adj.pl) {
                         const throughHereAndLower = D.has(segmToPaint) && D.get(segmToPaint) < spentCost
-                        if (!throughHereAndLower) D.set(segmToPaint, spentCost)
+                        if (!throughHereAndLower && spentCost < state.costAllowed.clickLines) D.set(segmToPaint, spentCost)
                     }
 
                 } else {
@@ -86,22 +91,30 @@ export const updateActiveEls = (sub, sync) => {
     }
 
     state.activeStations.add(decodedSub.name)
-    addReachableNodes(decodedSub, sync ? state.costAllowedForSearch : state.costAllowedForHover)
+    addReachableNodes(decodedSub, sync ? state.costAllowed.clickStations : state.costAllowed.hover)
 
+    // Diverge for animation on click
     if (sync) {
 
         // Add timeouts for entering active stations
         M.forEach((timeout, key) => {
             setSavedTimeout(() => {
                 state.activeStations.add(decodeSubstation(key).name)
-            }, timeout * 1)
+            }, timeout * (playbackSpeed < 3 ? playbackSpeed / 3 : 1))
+        })
+
+        // Add timeouts for entering active stations (listed on panel, different pace)
+        M.forEach((timeout, key) => {
+            setSavedTimeout(() => {
+                state.activeStationsListed.add(`${decodeSubstation(key).name},${decodeSubstation(key).pl},${timeout}`)
+            }, timeout * playbackSpeed)
         })
 
         // Add timeouts for entering active line segments
         D.forEach((timeout, key) => {
             setSavedTimeout(() => {
                 state.activeLineSegments.add(key)
-            }, timeout * 3)
+            }, timeout * playbackSpeed)
         })
 
         // Render every 50 milliseconds (fps is 1000/~)
@@ -110,7 +123,14 @@ export const updateActiveEls = (sub, sync) => {
                 render()
             }, i)
         }
-        
+
+        // Update the clock figures
+        for (let i = 0; i < state.costAllowed.clickLines; i += 60) {
+            setSavedTimeout(() => {
+                d3.select('.time-elapsed').text(i / 60 + 1)
+            }, i * playbackSpeed)
+        }
+
     }
 
     M.clear()

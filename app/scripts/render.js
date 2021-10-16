@@ -1,7 +1,9 @@
 import * as d3 from 'd3'
-import { BGCOLOR, BGCOLOR_ANIMATING, DIMCOLOR, HOVER_RADIUS, SPLINE_ALPHA, SVG_CONFIG } from "./config";
+import { HOVER_RADIUS, SVG_CONFIG } from "./config";
 import { areTheSameSubstation, decodeSegment, decodeSubstation, encodeSubstation } from "./encoders";
 import { clickOnStation, hoverOnStation } from "./interactions";
+import { renderPanel } from './panel';
+import { getState, getSubway } from './config';
 import { DEFAULT_TEXT_OFFSET, EN_TRANSLATE, getTextOffsetDict } from './textOffset';
 import { generateArcPathForSubstation, generateCirclePath, getStationsFromSegment, padArray } from "./utils";
 
@@ -10,11 +12,17 @@ const PATH_THAT_COVERS_ALL = `M ${viewbox[0]} ${viewbox[1]} H ${viewbox[2]} V ${
 
 export const render = () => {
 
-    const state = window.state
-    const { g, gStationsOverlay, gLinesOverlay, gLinesAmbient } = state.els
+    const state = getState()
+    const { palette, splineTension } = state
+    const { gStationsOverlay, gLinesOverlay, gLinesAmbient } = state.els
     const { stations, lines } = state.subway
 
-    document.body.style.backgroundColor = state.animating ? BGCOLOR_ANIMATING : BGCOLOR
+    // Determine background color
+    let baseColors = state.animating ? palette.backgroundWhileAnimating : palette.background
+    document.body.style.backgroundColor = state.darkMode ? baseColors[0] : baseColors[1]
+
+    d3.select("body").classed("animating", state.animating).classed("light-background", !state.darkMode)
+    renderPanel()
 
     gStationsOverlay
         .selectAll('path')
@@ -57,7 +65,7 @@ export const render = () => {
                     const segment = decodeSegment(rawD)
                     let activeStations = getStationsFromSegment(segment, true)
                     // let activeStations = ['阎村东', segment.from, segment.to, '顺义'] // Freestyle line-drawing!
-                    return d3.line().curve(d3.curveCatmullRomOpen.alpha(SPLINE_ALPHA))(activeStations.map(name => {
+                    return d3.line().curve(d3.curveCardinalOpen.tension(splineTension))(activeStations.map(name => {
                         const s = stations.dict[name]
                         return [s.x, s.y]
                     }))
@@ -78,7 +86,7 @@ export const render = () => {
                 .attr('d', rawD => {
                     const segment = decodeSegment(rawD)
                     let activeStations = getStationsFromSegment(segment, true)
-                    return d3.line().curve(d3.curveCatmullRomOpen.alpha(SPLINE_ALPHA))(activeStations.map(name => {
+                    return d3.line().curve(d3.curveCardinalOpen.tension(splineTension))(activeStations.map(name => {
                         const s = stations.dict[name]
                         return [s.x, s.y]
                     }))
@@ -87,21 +95,23 @@ export const render = () => {
 }
 
 export const renderTextOn = g => {
-    const { stations } = window.state.subway
+    const { stations } = getSubway()
+    const { palette, showStationNameOnMap } = getState()
     const offsetDict = getTextOffsetDict()
+    const stationsToRenderText = stations.list.filter(name => {
+        if (Math.random() > showStationNameOnMap) return false
+        return !stations.dict[name].isAux && stations.dict[name].parentLines.length === 1
+    })
 
     // Append group of base text
-    const gStationsText = g.append('g')
-        .attr('class', 'g-text')
+    const gStationsText = g
         .selectAll('svg')
-        .data(stations.list.filter(name => {
-            return !stations.dict[name].isAux && stations.dict[name].parentLines.length === 1
-        }))
+        .data(stationsToRenderText)
         .join('svg')
         .attr('x', name => stations.dict[name].x)
         .attr('y', name => stations.dict[name].y)
 
-    const texts = gStationsText.append("g").attr('fill', DIMCOLOR)
+    const texts = gStationsText.html("").append("g").attr('fill', palette.dimColor)
 
     // Chinese Station Names
     texts.append('text')
@@ -114,7 +124,7 @@ export const renderTextOn = g => {
                 .attr('y', offsetConfig.y)
                 .attr('text-anchor', offsetConfig.anchor)
         })
-    // Translated Station Names
+    // Translated (in linguistics, not computer graphics) Station Names
     texts.append('text')
         .attr('class', 'station-text en-us')
         .text(d => stations.dict[d].translation)
@@ -130,28 +140,37 @@ export const renderTextOn = g => {
 
 export const renderLineBaseOn = g => {
 
-    const { stations, lines } = window.state.subway
+    const { stations, lines } = getSubway()
+    const { useAuxStations, splineTension } = getState()
 
-    g.append('g')
-        .attr('class', 'g-line-base')
-        .selectAll('path')
+    g.selectAll('path')
         .data(lines.list)
         .join('path')
         .attr('d', lineId => {
             let line = lines.dict[lineId]
             if (line.loop) {
-                return d3.line().curve(d3.curveCatmullRomClosed.alpha(SPLINE_ALPHA))(
-                    line.stations.map(name => [
-                        stations.dict[name].x,
-                        stations.dict[name].y
-                    ])
+                return d3.line().curve(d3.curveCardinalClosed.tension(splineTension))(
+                    line.stations
+                        .filter(name => {
+                            if (useAuxStations) return true
+                            return !stations.dict[name].isAux
+                        })
+                        .map(name => [
+                            stations.dict[name].x,
+                            stations.dict[name].y
+                        ])
                 )
             } else {
-                return d3.line().curve(d3.curveCatmullRomOpen.alpha(SPLINE_ALPHA))(
-                    padArray(line.stations, false).map(name => [
-                        stations.dict[name].x,
-                        stations.dict[name].y
-                    ])
+                return d3.line().curve(d3.curveCardinalOpen.tension(splineTension))(
+                    padArray(line.stations, false)
+                        .filter(name => {
+                            if (useAuxStations) return true
+                            return !stations.dict[name].isAux
+                        })
+                        .map(name => [
+                            stations.dict[name].x,
+                            stations.dict[name].y
+                        ])
                 )
             }
         })
@@ -163,7 +182,7 @@ export const renderLineBaseOn = g => {
 }
 
 export const renderLineClipsOn = gClipped => {
-    const { stations } = window.state.subway
+    const { stations } = getSubway()
     const interchanges = stations.list.filter(name => {
         const { isAux, parentLines } = stations.dict[name]
         return (!isAux) && parentLines.length > 1
@@ -178,7 +197,7 @@ export const renderLineClipsOn = gClipped => {
 }
 
 export const renderVoronoiClipsOn = (gClipped, g) => {
-    const { stations } = window.state.subway
+    const { stations } = getSubway()
     const allStationsPath = stations.list.reduce((accu, curr) => {
         const { x, y, parentLines } = stations.dict[curr]
         return `${accu} ${generateCirclePath(x, y, HOVER_RADIUS)}`
@@ -192,7 +211,7 @@ export const renderVoronoiClipsOn = (gClipped, g) => {
 }
 
 export const renderStationInteractiveOn = g => {
-    const { stations } = window.state.subway
+    const { stations } = getSubway()
     const substationList = stations.list
         .filter(name => !stations.dict[name].isAux)
         .map(
@@ -212,6 +231,7 @@ export const renderStationInteractiveOn = g => {
     const gStationsInteractiveArea = g.append('g')
         .attr('class', 'g-interactive-area')
 
+    // Append voronoi lines, not rendered by default
     gStationsInteractiveArea
         .append('path')
         .attr('class', 'voronoi-lines')
@@ -221,6 +241,7 @@ export const renderStationInteractiveOn = g => {
         .attr('stroke-width', 1)
         .attr('clip-path', 'url(#voronoi-clip)')
 
+    // Append the true interactive area
     gStationsInteractiveArea
         .append('path')
         .attr('class', 'interactive-rect')

@@ -1,6 +1,7 @@
 import * as d3 from "d3"
 import { decodeSubstation } from './encoders'
 import { AIRPORT_LINE_ID } from './config'
+import { getState, getSubway } from "./config"
 
 export const generateCirclePath = (cx, cy, r) => {
     return `M ${cx} ${cy} m -${r}, 0 a ${r}, ${r} 0 1, 0 ${r * 2}, 0 a ${r}, ${r} 0 1 ,0 -${r * 2}, 0`
@@ -60,7 +61,7 @@ export const findClosestPairsBidirectional = (arr, start, end) => {
 }
 
 export const getStationsFromSegment = (segm, withPadding) => {
-    const { lines } = window.state.subway
+    const { lines } = getSubway()
     let { lineId, from, to } = segm
     let allStations, iFrom, iTo
 
@@ -82,7 +83,7 @@ export const getStationsFromSegment = (segm, withPadding) => {
 }
 
 export const generateArcPathForSubstation = (sub, returnCentroid) => {
-    const { stations } = window.state.subway
+    const { stations } = getSubway()
     const { name, pl } = decodeSubstation(sub)
 
     // Generate arc-objects using d3.pie (see https://github.com/d3/d3-shape#pie)
@@ -116,13 +117,14 @@ export const generateArcPathForSubstation = (sub, returnCentroid) => {
 }
 
 export const setSavedTimeout = (fn, t) => {
-    const { triggers } = window.state
+    const { triggers } = getState()
     const tId = setTimeout(fn, t)
     triggers.push(tId)
     return tId
 }
 
 export const clearAllSavedTimeouts = () => {
-    window.state.triggers.forEach(tId => clearTimeout(tId))
-    window.state.triggers = []
+    const state = getState()
+    state.triggers.forEach(tId => clearTimeout(tId))
+    state.triggers = []
 }

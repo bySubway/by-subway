@@ -1,12 +1,14 @@
 import * as d3 from 'd3'
-import { INITIAL_STATE, SVG_CONFIG } from './config'
+import { SVG_CONFIG } from './config'
 import { onReset } from './interactions'
 import { render, renderLineBaseOn, renderLineClipsOn, renderStationInteractiveOn, renderTextOn, renderVoronoiClipsOn } from './render'
+import { getState } from './config'
+import { initControls } from './panel'
 
 d3.json('./data/subway.json').then(subway => {
 
-    window.state = INITIAL_STATE(subway)
-    const state = window.state
+    const state = getState()
+    state.subway = subway
     const { lines, stations } = subway
 
     const svg = d3.select('svg-frame')
@@ -25,8 +27,10 @@ d3.json('./data/subway.json').then(subway => {
         .on('zoom', el => g.attr('transform', el.transform))
     svg.call(zoom)
 
-    renderTextOn(g)
-    renderLineBaseOn(g)
+    const gText = g.append('g').attr('class', 'g-text')
+    const gLineBase = g.append('g').attr('class', 'g-line-base')
+    renderTextOn(gText)
+    renderLineBaseOn(gLineBase)
 
     // Append the group of lines (overlay & base)
     const gLinesAmbient = g.append('g').attr('class', 'g-lines-ambient')
@@ -56,8 +60,9 @@ d3.json('./data/subway.json').then(subway => {
 
     state.els = {
         ...state.els,
-        svg, g, gStationsOverlay, gLinesAmbient, gLinesOverlay
+        svg, g, gStationsOverlay, gLinesAmbient, gLinesOverlay, gText, gLineBase
     }
 
     render()
+    initControls()
 })

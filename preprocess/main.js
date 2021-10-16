@@ -115,7 +115,7 @@ Promise.all([
 
             // Calculate transfer time based on t and d
             // Assume walk speed 1.5m/s
-            // Assume average transfer waiting time 300s
+            // Assume average transfer waiting time 180s
 
             stationObj.substations[fromLine].adjacents.push({
                 name: stationName,

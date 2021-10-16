@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;700;900&display=swap');
 
 body {
     margin: 0;
@@ -11,94 +11,37 @@ body {
     font-family: 'Inter', 'Source Han Sans SC', sans-serif;
 }
 
-svg-frame {
+.container {
+    padding: 20px;
+    top: 0;
     left: 0;
     right: 0;
-    margin: 0 auto;
-    position: absolute;
-    align-self: center;
-}
-
-#root {
-    width: 100vw;
-    height: 100vh;
-}
-
-#g {
-    transition: transform 1s;
-}
-
-svg {
-    overflow: auto;
-}
-
-.interactive-rect {
-    transition: .2s;
-    cursor: pointer;
-}
-
-.overlaid-station {
+    bottom: 0;
+    position: fixed;
     pointer-events: none;
-    transition: all .1s;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
-.overlaid-station:not(.active) {
-    fill: #444;
-    transition: transform .1s, fill .4s ease-in;
+.title, #reset, .panels {
+    pointer-events: all;
 }
 
-.overlaid-station.center {
-    fill: white;
+a, a:hover, a:link, a:focus, a:visited {
+    color: inherit;
 }
 
-.station-bars {
-    transform: rotate(45deg)
+.scroll::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
 }
-
-.station-text {
-    cursor: default;
-    user-select: none;
+  
+.scroll::-webkit-scrollbar-track-piece {
+    background-color: transparent;
 }
-
-.station-text.zh-cn {
-    font-size: 8px;
-    font-weight: bold;
-}
-
-.station-text.en-us {
-    font-size: 5px;
-    font-weight: 700;
-}
-
-#reset {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-}
-
-.g-lines-ambient {
-    opacity: 0.06;
-}
-
-.g-voronoi-clouds, .voronoi-lines {
-    pointer-events: none;
-    display: none;
-}
-
-.button {
-    background: #444;
-    color: #eee;
-    padding: 5px 10px;
-    cursor: pointer;
-    user-select: none;
-    transition: all .2s;
-    border-radius: 10px;
-}
-
-.button:hover {
-    background: olive;
-}
-
-.button:active {
-    background: #aaa;
+  
+.scroll::-webkit-scrollbar-thumb:vertical {
+    height: 15px;
+    background-color: #aaaaaaaa;
 }

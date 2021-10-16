@@ -3,13 +3,86 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>By Subway - Index</title>
-    <link href="styles/base.css" rel="stylesheet" />
+    <title>30 Minutes By Subway - Index</title>
+    <link href="https://api.fontshare.com/css?f[]=tabular@1,2&display=swap" rel="stylesheet">
+    <link href="styles/base.css?v2" rel="stylesheet" />
+    <link href="styles/in-frame.css" rel="stylesheet" />
+    <link href="styles/title.css" rel="stylesheet" />
+    <link href="styles/panels.css" rel="stylesheet" />
+    <link href="styles/controls.css" rel="stylesheet" />
 </head>
 
 <body>
     <svg-frame></svg-frame>
-    <div class="button" id="reset">Reset</div>
+    <div class="container">
+        <div class="left-col">
+            <div class="title">
+                <span class="time-elapsed"></span>
+                <br />
+                <div class="row">
+                    <span>Min</span><span class="additional">utes</span>
+                </div>
+                <span>by</span>
+                <br />
+                <div class="row">
+                    <span>Sub</span><span class="additional">way</span>
+                </div>
+                <hr />
+            </div>
+            <div id="reset">
+                <img src="assets/undo.svg" alt="Reset icon" />
+            </div>
+        </div>
+
+        <div class="panels scroll">
+            <div class="panel station-info">
+                <h1>Current Station</h1>
+                <hr />
+                <h2 class="name-cluster">
+                    <span class="name"></span>
+                    <span class="name-substation"></span>
+                </h2>
+                <h3 class="name-en"></h3>
+                <div class="pls"></div>
+            </div>
+            <div class="panel config">
+                <h1>Configurations</h1>
+                <hr />
+                <div class="config-items">
+                </div>
+            </div>
+            <div class="panel stations-reached">
+                <h1>Stations Reached</h1>
+                <hr />
+                <div class="data-viewport scroll">
+                    <div class="data"></div>
+                </div>
+            </div>
+            <div class="panel segments-reached">
+                <h1>Segments Reached</h1>
+                <hr />
+                <div class="data-viewport scroll">
+                    <div class="data"></div>
+                </div>
+            </div>
+            <div class="panel explanations">
+                <h1>Explanations</h1>
+                <hr />
+                <ul>
+                    <li>本地图可以给出任意城市地铁线路图中，从选定站点出发，30 min 通勤时间内可到达的所有站点与途经路线范围。</li>
+                    <li>您当前载入线路图的城市为 <span class="data-source">北京（Beijing, China)</span>，地铁路线图、通勤时间、换乘时长等数据来源为 <a href="https://map.bjsubway.com/" class="data-source">北京地铁官网</a>，数据更新于 <span class="data-source">2021 年 7 月</span>。</li>
+                    <li>您可能注意到，在同一站点的不同线路站台上，30 min 通勤圈的形态有所差异。这是因为部分换乘站的各个子站之间存在较远的距离，在其之内步行换乘的时间常常超出乘坐一站地铁所需的时间。本地图考虑了这一影响。</li>
+                    <li>换乘步行所需的时间因站点而异，且对同一站点来说较为稳定，因此体现在了本图中。而换乘一次等车所需的时间由于过于复杂且不稳定，故对所有站点一律设定为 180 秒。</li>
+                    <li>地铁的通勤速度受交通管制、客流情况、班次密集程度、换乘步行速度等多方面影响。本地图所给出均为估算结果，并不保证完全准确。</li>
+                </ul>
+            </div>
+            <div class="panel credits">
+                <h1>Credits & Links</h1>
+                <hr />
+            </div>
+        </div>
+
+    </div>
 </body>
 
 <script src="main.bundle.js"></script>

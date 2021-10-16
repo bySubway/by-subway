@@ -1,0 +1,203 @@
+input[type=range]:hover {
+    opacity: 1;
+}
+input[type=range] {
+    width: 100%;
+    margin: 7.8px 0;
+    background-color: transparent;
+    -webkit-appearance: none;
+    opacity: 0.8;
+    transition: all .2s;
+}
+input[type=range]:focus {
+    outline: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+    background: #4d4d4d;
+    border: 0px solid rgba(1, 1, 1, 0);
+    border: 0;
+    border-radius: 25px;
+    width: 100%;
+    height: 4.4px;
+    cursor: pointer;
+}
+input[type=range]::-webkit-slider-thumb {
+    margin-top: -7.8px;
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.93);
+    border: 0;
+    border-radius: 7px;
+    cursor: pointer;
+    -webkit-appearance: none;
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+    background: #555555;
+}
+input[type=range]::-moz-range-track {
+    background: #4d4d4d;
+    border: 0px solid rgba(1, 1, 1, 0);
+    border: 0;
+    border-radius: 25px;
+    width: 100%;
+    height: 4.4px;
+    cursor: pointer;
+}
+input[type=range]::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.93);
+    border: 0;
+    border-radius: 7px;
+    cursor: pointer;
+}
+input[type=range]::-ms-track {
+    background: transparent;
+    border-color: transparent;
+    border-width: 7.8px 0;
+    color: transparent;
+    width: 100%;
+    height: 4.4px;
+    cursor: pointer;
+}
+input[type=range]::-ms-fill-lower {
+    background: #454545;
+    border: 0px solid rgba(1, 1, 1, 0);
+    border: 0;
+    border-radius: 50px;
+}
+input[type=range]::-ms-fill-upper {
+    background: #4d4d4d;
+    border: 0px solid rgba(1, 1, 1, 0);
+    border: 0;
+    border-radius: 50px;
+}
+input[type=range]::-ms-thumb {
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.93);
+    border: 0;
+    border-radius: 7px;
+    cursor: pointer;
+    margin-top: 0px;
+    /*Needed to keep the Edge thumb centred*/
+}
+input[type=range]:focus::-ms-fill-lower {
+    background: #4d4d4d;
+}
+input[type=range]:focus::-ms-fill-upper {
+    background: #555555;
+}
+@supports (-ms-ime-align:auto) {
+    input[type=range] {
+        margin: 0;
+    }
+}
+input[type=range] {
+    width: 100%;
+    margin: 7.8px 0;
+    background-color: transparent;
+    -webkit-appearance: none;
+}
+input[type=range]:focus {
+    outline: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+    background: #4d4d4d;
+    border: 0px solid rgba(1, 1, 1, 0);
+    border: 0;
+    border-radius: 25px;
+    width: 100%;
+    height: 4.4px;
+    cursor: pointer;
+}
+input[type=range]::-webkit-slider-thumb {
+    margin-top: -7.8px;
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.93);
+    border: 0;
+    border-radius: 7px;
+    cursor: pointer;
+    -webkit-appearance: none;
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+    background: #4d4d4d;
+}
+input[type=range]::-moz-range-track {
+    background: #4d4d4d;
+    border: 0px solid rgba(1, 1, 1, 0);
+    border: 0;
+    border-radius: 25px;
+    width: 100%;
+    height: 4.4px;
+    cursor: pointer;
+}
+input[type=range]::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.93);
+    border: 0;
+    border-radius: 7px;
+    cursor: pointer;
+}
+input[type=range]::-ms-track {
+    background: transparent;
+    border-color: transparent;
+    border-width: 7.8px 0;
+    color: transparent;
+    width: 100%;
+    height: 4.4px;
+    cursor: pointer;
+}
+input[type=range]::-ms-fill-lower {
+    background: #4d4d4d;
+    border: 0px solid rgba(1, 1, 1, 0);
+    border: 0;
+    border-radius: 50px;
+}
+input[type=range]::-ms-fill-upper {
+    background: #4d4d4d;
+    border: 0px solid rgba(1, 1, 1, 0);
+    border: 0;
+    border-radius: 50px;
+}
+input[type=range]::-ms-thumb {
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.93);
+    border: 0;
+    border-radius: 7px;
+    cursor: pointer;
+    margin-top: 0px;
+    /*Needed to keep the Edge thumb centred*/
+}
+input[type=range]:focus::-ms-fill-lower {
+    background: #4d4d4d;
+}
+input[type=range]:focus::-ms-fill-upper {
+    background: #4d4d4d;
+}
+@supports (-ms-ime-align:auto) {
+    input[type=range] {
+        margin: 0;
+    }
+}
+  
+
+.config-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.config-item h5 {
+    width: 300px;
+    margin: 5px 0;
+}
+
+body.animating .config-item input {
+    opacity: 0.1;
+    pointer-events: none;
+    cursor: not-allowed;
+}
