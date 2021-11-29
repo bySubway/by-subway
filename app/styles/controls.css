@@ -191,9 +191,23 @@ input[type=range]:focus::-ms-fill-upper {
     align-items: center;
 }
 
-.config-item h5 {
-    width: 300px;
+.config-item h5, .config-item p {
     margin: 5px 0;
+}
+
+.config-item h5 {
+    width: 160px;
+    font-weight: normal;
+}
+
+.config-item p {
+    width: 50px;
+    margin-left: 10px;
+    text-align: right;
+}
+
+.config-item input {
+    flex: 1;
 }
 
 body.animating .config-item input {

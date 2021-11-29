@@ -13,13 +13,9 @@ export const clearActiveEls = () => {
 
 }
 
-export const updateActiveEls = (sub, sync) => {
+export const updateActiveEls = (startingNode, clicked) => {
 
-    const state = getState()
-    const { playbackSpeed } = state
-    const { stations } = state.subway
-
-    clearActiveEls()
+    const { playbackSpeed, costAllowed, subway, activeStations, activeLineSegments } = getState()
 
     // The recorded maximum timeout, for determining animation play duration
     let T = 0
@@ -31,114 +27,100 @@ export const updateActiveEls = (sub, sync) => {
     // Segment with substations of the same pl preserved
     const S = new Set()
 
-    const decodedSub = decodeSubstation(sub)
+    clearActiveEls()
+    const decodedSub = decodeSubstation(startingNode)
 
     const addReachableNodes = (origin, cost) => {
 
         const { name, pl } = origin
-        const { adjacents } = stations.dict[origin.name].substations[pl]
+        const { adjacents } = subway.stations.dict[origin.name].substations[pl]
 
         // For an adjacent, check if has been here and the cost is actually lower
-        const spentCost = state.costAllowed.clickStations - cost
+        const spentCost = costAllowed.clickStations - cost
         const encodedSub = encodeSubstation(name, pl)
-
         const beenHereAndLower = M.has(encodedSub) && M.get(encodedSub) < spentCost
-        // Dijkstra!
         if (!beenHereAndLower) M.set(encodedSub, spentCost)
+
+        // Wait a minute - did I just implemented Dijkstra?
 
         for (const adj of adjacents) {
 
             if (!(adj.t > 0)) {
                 throw new Error(`Cost of ${adj.name} (${adj.t}) should be above zero. Process halted to prevent infinite recursive calls.`)
             }
-
             if (beenHereAndLower && S.has(encodeSegmentBySubstations(origin, adj))) {
                 // Condition #2 to stop recursive call
             }
-
             else if (adj.t < cost) {
-                // This adjacent point is reachable!
+                // This adjacent point is reachable, continue search
                 S.add(encodeSegmentBySubstations(origin, adj))
-
                 const segmToPaint = encodeSegment({
                     lineId: pl,
                     from: name,
                     to: adj.name
                 })
-
-                if (sync) {
-
-                    const spentCost = state.costAllowed.clickStations - (cost - adj.t)
+                if (clicked) {
+                    const spentCost = costAllowed.clickStations - (cost - adj.t)
                     T = Math.max(T, spentCost * playbackSpeed)
                     // No need to draw if the segment is a transfer segment
                     if (pl === adj.pl) {
                         const throughHereAndLower = D.has(segmToPaint) && D.get(segmToPaint) < spentCost
-                        if (!throughHereAndLower && spentCost < state.costAllowed.clickLines) D.set(segmToPaint, spentCost)
+                        if (!throughHereAndLower && spentCost < costAllowed.clickLines) D.set(segmToPaint, spentCost)
                     }
-
                 } else {
-
-                    state.activeStations.add(adj.name)
+                    activeStations.add(adj.name)
                     if (pl === adj.pl) {
-                        state.activeLineSegments.add(segmToPaint)
+                        activeLineSegments.add(segmToPaint)
                     }
-
                 }
-
                 addReachableNodes(adj, cost - adj.t)
             }
         }
     }
 
-    state.activeStations.add(decodedSub.name)
-    addReachableNodes(decodedSub, sync ? state.costAllowed.clickStations : state.costAllowed.hover)
+    activeStations.add(decodedSub.name)
+    addReachableNodes(decodedSub, clicked ? costAllowed.clickStations : costAllowed.hover)
+    if (clicked) triggerAnimation(M, D, T)
 
-    // Diverge for animation on click
-    if (sync) {
-
-        // Add timeouts for entering active stations
-        M.forEach((timeout, key) => {
-            setSavedTimeout(() => {
-                state.activeStations.add(decodeSubstation(key).name)
-            }, timeout * (playbackSpeed < 3 ? playbackSpeed / 3 : 1))
-        })
-
-        // Add timeouts for entering active stations (listed on panel, different pace)
-        M.forEach((timeout, key) => {
-            setSavedTimeout(() => {
-                state.activeStationsListed.add(`${decodeSubstation(key).name},${decodeSubstation(key).pl},${timeout}`)
-            }, timeout * playbackSpeed)
-        })
-
-        // Add timeouts for entering active line segments
-        D.forEach((timeout, key) => {
-            setSavedTimeout(() => {
-                state.activeLineSegments.add(key)
-            }, timeout * playbackSpeed)
-        })
-
-        // Render every 50 milliseconds (fps is 1000/~)
-        for (let i = 0; i < T; i += 50) {
-            setSavedTimeout(() => {
-                render()
-            }, i)
-        }
-
-        // Update the clock figures
-        for (let i = 0; i < state.costAllowed.clickLines; i += 60) {
-            setSavedTimeout(() => {
-                d3.select('.time-elapsed').text(i / 60 + 1)
-            }, i * playbackSpeed)
-        }
-
-    }
-
+    // Release the spaces
     M.clear()
     S.clear()
     D.clear()
 }
 
+const triggerAnimation = (M, D, T) => {
 
+    const { playbackSpeed, costAllowed, activeStations, activeLineSegments, activeStationsListed } = getState()
 
+    // Add timeouts for entering active stations (faster pace)
+    M.forEach((timeout, key) => {
+        setSavedTimeout(() => {
+            activeStations.add(decodeSubstation(key).name)
+        }, timeout * (playbackSpeed < 3 ? playbackSpeed / 3 : 1))
+    })
+    // Add timeouts for entering active line segments (slower pace)
+    D.forEach((timeout, key) => {
+        setSavedTimeout(() => {
+            activeLineSegments.add(key)
+        }, timeout * playbackSpeed)
+    })
+    // Add timeouts for entering active stations in the config panel
+    M.forEach((timeout, key) => {
+        setSavedTimeout(() => {
+            activeStationsListed.add(`${decodeSubstation(key).name},${decodeSubstation(key).pl},${timeout}`)
+        }, timeout * playbackSpeed)
+    })
+    // Render every 50 milliseconds (fps is 1000/~)
+    for (let i = 0; i < T; i += 50) {
+        setSavedTimeout(() => {
+            render()
+        }, i)
+    }
+    // Update the clock figures
+    for (let i = 0; i < costAllowed.clickLines; i += 60) {
+        setSavedTimeout(() => {
+            d3.select('.time-elapsed').text(i / 60 + 1)
+        }, i * playbackSpeed)
+    }
 
-
+}

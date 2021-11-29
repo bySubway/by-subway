@@ -4,11 +4,19 @@ import { getState } from './config'
 import { set } from 'lodash'
 import { render, renderLineBaseOn, renderTextOn } from './render'
 
+const displayBooleanValue = orig => {
+    if (orig >= 1) return 'Sure'
+    else if (orig <= 0) return 'Nope'
+    else if (orig >= 0.3) return 'Maybe'
+    else return 'Hmmm'
+}
+
 export const initControls = () => {
     const configurables = [
         {
             statePath: 'playbackSpeed',
             beforeSend: orig => 30 / orig,
+            beforeDisplayValue: orig => `${Math.round(orig) * 30}x`,
             text: 'Playback Speed',
             rangeProps: {
                 min: 1,
@@ -20,10 +28,11 @@ export const initControls = () => {
         {
             statePath: 'costAllowed.hover',
             beforeSend: orig => orig * 60,
+            beforeDisplayValue: orig => `${orig}min`,
             text: 'Cost for Hovering',
             rangeProps: {
                 min: 10,
-                max: 60,
+                max: 40,
                 step: 1,
                 value: 30
             }
@@ -31,6 +40,7 @@ export const initControls = () => {
         {
             statePath: 'costAllowed.clickLines',
             beforeSend: orig => orig * 60,
+            beforeDisplayValue: orig => `${orig}min`,
             text: 'Cost for Clicking',
             rangeProps: {
                 min: 10,
@@ -42,6 +52,7 @@ export const initControls = () => {
         {
             statePath: 'splineTension',
             beforeSend: orig => orig,
+            beforeDisplayValue: orig => orig,
             afterSend: () => {
                 renderLineBaseOn(getState().els.gLineBase)
             },
@@ -56,6 +67,7 @@ export const initControls = () => {
         {
             statePath: 'useAuxStations',
             beforeSend: orig => orig === '1' ? true : false,
+            beforeDisplayValue: displayBooleanValue,
             afterSend: () => {
                 renderLineBaseOn(getState().els.gLineBase)
             },
@@ -70,6 +82,7 @@ export const initControls = () => {
         {
             statePath: 'showStationNameOnMap',
             beforeSend: orig => orig,
+            beforeDisplayValue: displayBooleanValue,
             afterSend: () => {
                 renderTextOn(getState().els.gText)
             },
@@ -84,6 +97,7 @@ export const initControls = () => {
         {
             statePath: 'darkMode',
             beforeSend: orig => orig === '1' ? true : false,
+            beforeDisplayValue: displayBooleanValue,
             afterSend: () => {
                 render()
             },
@@ -114,8 +128,10 @@ export const initControls = () => {
             const newValue = ev.target.value
             const state = getState()
             set(state, c.statePath, c.beforeSend(newValue))
+            d3.select(ev.target.parentNode).select('p').text(c.beforeDisplayValue(newValue))
             if (c.afterSend) c.afterSend()
         })
+    configItems.append('p').text(c => c.beforeDisplayValue(c.rangeProps.value))
 
 }
 
