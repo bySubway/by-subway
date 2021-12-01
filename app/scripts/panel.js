@@ -71,7 +71,7 @@ export const initControls = () => {
             afterSend: () => {
                 renderLineBaseOn(getState().els.gLineBase)
             },
-            text: 'Use Auxiliary Stations',
+            text: 'Fix Curve Topology',
             rangeProps: {
                 min: 0,
                 max: 1,
@@ -108,6 +108,18 @@ export const initControls = () => {
                 step: 1,
                 value: 1
             }
+        },
+        {
+            statePath: 'useWigglyCurves',
+            beforeSend: orig => orig === '1' ? true : false,
+            beforeDisplayValue: displayBooleanValue,
+            text: "I'm drunk",
+            rangeProps: {
+                min: 0,
+                max: 1,
+                step: 1,
+                value: 0
+            }
         }
     ]
 
@@ -141,6 +153,7 @@ export const renderPanel = () => {
 
     if (centerStation) {
         const { name, pl } = decodeSubstation(centerStation)
+        d3.select(".name-pls-content").style("opacity", 1)
         d3.select(".name").text(name)
         d3.select(".name-substation").text(stations.dict[name].parentLines.length > 1 ? `${lines.dict[pl].name}站台` : '')
         d3.select(".name-en").text(stations.dict[name].translation)
@@ -152,9 +165,10 @@ export const renderPanel = () => {
             .text(pl => lines.dict[pl].name)
             .style('background', pl => lines.dict[pl].color)
     } else {
-        d3.select(".name").text('')
-        d3.select(".name-en").text('')
-        d3.select(".pls").html('')
+        d3.select(".name-pls-content").style("opacity", 0.1)
+        d3.select(".name").text('未选择')
+        d3.select(".name-en").text('None selected')
+        d3.select(".pls").html(`<div class="single-pl-box-mini" style="background: #aaa">　　　</div>`.repeat(2))
         d3.select(".name-substation").text('')
     }
 

@@ -1,5 +1,5 @@
 export const AIRPORT_LINE_ID = 15
-export const HOVER_RADIUS = 30
+export const HOVER_RADIUS = 50
 export const SVG_CONFIG = {
     viewbox: [-100, 0, 2000, 1400]
 }
@@ -25,6 +25,7 @@ const store = {
     showStationNameOnMap: 1,
     animating: false,
     useAuxStations: true,
+    useWigglyCurves: false,
     splineTension: 0.3,
     playbackSpeed: 3,
     els: {},

@@ -13,7 +13,7 @@ const PATH_THAT_COVERS_ALL = `M ${viewbox[0]} ${viewbox[1]} H ${viewbox[2]} V ${
 export const render = () => {
 
     const state = getState()
-    const { palette, splineTension } = state
+    const { palette, splineTension, useWigglyCurves } = state
     const { gStationsOverlay, gLinesOverlay, gLinesAmbient } = state.els
     const { stations, lines } = state.subway
 
@@ -63,8 +63,8 @@ export const render = () => {
                 .attr('fill', 'transparent')
                 .attr('d', rawD => {
                     const segment = decodeSegment(rawD)
-                    let activeStations = getStationsFromSegment(segment, true)
-                    // let activeStations = ['阎村东', segment.from, segment.to, '顺义'] // Freestyle line-drawing!
+                    // Freestyle line drawing!
+                    let activeStations = useWigglyCurves ?['阎村东', segment.from, segment.to, '顺义'] : getStationsFromSegment(segment, true)
                     return d3.line().curve(d3.curveCardinalOpen.tension(splineTension))(activeStations.map(name => {
                         const s = stations.dict[name]
                         return [s.x, s.y]
