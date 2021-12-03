@@ -42,15 +42,12 @@ svg {
     fill: white;
 }
 
-body.light-background .overlaid-station.center {
-    fill: black;
-}
-
 .station-bars {
     transform: rotate(45deg)
 }
 
 .station-text {
+    fill: #666;
     cursor: default;
     user-select: none;
 }
@@ -72,4 +69,17 @@ body.light-background .overlaid-station.center {
 .g-voronoi-clouds, .voronoi-lines {
     pointer-events: none;
     display: none;
+}
+
+body.light-background .overlaid-station.center {
+    fill: white;
+    filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, .4));
+}
+
+body.light-background .station-text {
+    fill: #ddd;
+}
+
+body.light-background .overlaid-station:not(.active) {
+    fill: #ddd;
 }

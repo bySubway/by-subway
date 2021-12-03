@@ -99,6 +99,8 @@ export const renderTextOn = g => {
     const { palette, showStationNameOnMap } = getState()
     const offsetDict = getTextOffsetDict()
     const stationsToRenderText = stations.list.filter(name => {
+        if (showStationNameOnMap == 1.2) return true
+        if (showStationNameOnMap == 1.1) return !stations.dict[name].isAux
         if (Math.random() > showStationNameOnMap) return false
         return !stations.dict[name].isAux && stations.dict[name].parentLines.length === 1
     })
@@ -111,7 +113,7 @@ export const renderTextOn = g => {
         .attr('x', name => stations.dict[name].x)
         .attr('y', name => stations.dict[name].y)
 
-    const texts = gStationsText.html("").append("g").attr('fill', palette.dimColor)
+    const texts = gStationsText.html("").append("g")
 
     // Chinese Station Names
     texts.append('text')
@@ -141,7 +143,7 @@ export const renderTextOn = g => {
 export const renderLineBaseOn = g => {
 
     const { stations, lines } = getSubway()
-    const { useAuxStations, splineTension } = getState()
+    const { useAuxStations, splineTension, darkMode } = getState()
 
     g.selectAll('path')
         .data(lines.list)
@@ -174,7 +176,10 @@ export const renderLineBaseOn = g => {
                 )
             }
         })
-        .attr("stroke", lineId => lines.dict[lineId].color)
+        .attr("stroke", lineId => {
+            if (darkMode) return lines.dict[lineId].color
+            return '#ddd'
+        })
         .attr("stroke-width", 1)
         .attr("fill", 'none')
         .attr('clip-path', 'url(#line-clip)')

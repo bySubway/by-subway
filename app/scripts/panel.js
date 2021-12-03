@@ -5,9 +5,12 @@ import { set } from 'lodash'
 import { render, renderLineBaseOn, renderTextOn } from './render'
 
 const displayBooleanValue = orig => {
-    if (orig >= 1) return 'Sure'
-    else if (orig <= 0) return 'Nope'
-    else if (orig >= 0.3) return 'Maybe'
+    const num = Number(orig)
+    if (num === 1.2) return 'Debug'
+    else if (num === 1.1) return 'All'
+    else if (num === 1) return 'Sure'
+    else if (num <= 0) return 'Nope'
+    else if (num >= 0.3) return 'Maybe'
     else return 'Hmmm'
 }
 
@@ -99,6 +102,7 @@ export const initControls = () => {
             beforeSend: orig => orig === '1' ? true : false,
             beforeDisplayValue: displayBooleanValue,
             afterSend: () => {
+                renderLineBaseOn(getState().els.gLineBase)
                 render()
             },
             text: 'Dark Mode',

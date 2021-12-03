@@ -11,7 +11,7 @@ body.light-background .left-col {
 .title {
     font-family: 'Tabular', 'Inter', sans-serif;
     font-size: 120px;
-    width: 300px;
+    width: 200px;
     font-weight: 900;
     color: #ffffff;
     z-index: -1;
@@ -24,6 +24,7 @@ body.light-background .left-col {
 
 .title .row {
     width: 520px;
+    pointer-events: none;
 }
 
 .title hr {

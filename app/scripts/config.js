@@ -17,8 +17,7 @@ const store = {
     },
     palette: {
         background: ['#222', '#fff'],
-        backgroundWhileAnimating: ['#111', '#eee'],
-        dimColor: '#666'
+        backgroundWhileAnimating: ['#111', '#eee']
     },
     darkMode: true,
     showVoronoi: false,
